@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Frontend Mentor | Article preview component</title>
   </head>
-  <body>    
+  <body>
     <main>
       <div class="container">
         <!-- image -->
@@ -26,31 +26,47 @@
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
           </h1>
-          <p>
+          <p class="dec-text">
             Ever been in a room and felt like something was missing? Perhaps it
             felt slightly bare and uninviting. I’ve got some simple tips to help
             you make any room feel complete.
           </p>
-          <div class="user-info">
-            <img src="./images/avatar-michelle.jpg" alt="" />
-            <div class="user-dec">
-              <h2>Michelle Appleton</h2>
-              <p>28 Jun 2020</p>
-            </div>
-            <button>
+        </div>
+        <div class="user-info">
+          <img class="user-avatar" src="./images/avatar-michelle.jpg" alt="" />
+          <div class="user-dec">
+            <h2>Michelle Appleton</h2>
+            <p>28 Jun 2020</p>
+          </div>
+          <button class="share-btn">
+            <img src="./images/icon-share.svg" alt="" />
+          </button>
+          <div class="share">
+            <p class="share-text">share</p>
+            <ul class="share-logos">
+              <li class="logo">
+                <button class="logo-btn">
+                  <img src="./images/icon-facebook.svg" alt="" />
+                </button>
+              </li>
+              <li>
+                <button class="logo-btn">
+                  <img src="./images/icon-twitter.svg" alt="" />
+                </button>
+              </li>
+              <li>
+                <button class="logo-btn">
+                  <img src="./images/icon-pinterest.svg" alt="" />
+                </button>
+              </li>
+            </ul>
+            <button class="share-btn">
               <img src="./images/icon-share.svg" alt="" />
             </button>
+          </div>
         </div>
-        <!-- <div class="share">
-          <p>share</p>
-          <ul><li>
-          </li></ul>
-          <button><img src="./images/icon-share.svg" alt="" /></button>
-
-        </div> -->
       </div>
     </main>
-
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
