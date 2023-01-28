@@ -14,8 +14,7 @@ body {
   font-size: 13px;
 }
 h1,
-h2,
-h3 {
+h2 {
   font-weight: 700;
   color: $cl_veryDarkGrayishBlue;
 }
@@ -34,4 +33,5 @@ ul {
 }
 button {
   cursor: pointer;
+  transition: $transition;
 }

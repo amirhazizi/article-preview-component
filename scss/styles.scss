@@ -1,13 +1,14 @@
 @import "./utils/config";
 @import "./components/share";
 @import "./components/footer";
-
+// body
 body {
   min-height: 100vh;
   background: $cl_lightGrayishBlue;
   display: grid;
   place-items: center;
 }
+// main
 .container {
   display: grid;
   position: relative;
@@ -69,6 +70,7 @@ body {
     .share-btn {
       border: none;
       border-radius: $radius * 10;
+      z-index: 1;
       img {
         padding: 0.6rem;
         height: 2rem;
@@ -77,7 +79,15 @@ body {
     }
   }
 }
+// class for active share and share btn
 .avtive {
   visibility: visible;
 }
+.active-btn {
+  background: $cl_desaturatedDarkBlue;
+  img {
+    filter: brightness(700%);
+  }
+}
+// media queries
 @import "./utils/desktop";
