@@ -1,0 +1,80 @@
+//   share small div
+.share {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  padding-right: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  background: $cl_veryDarkGrayishBlue;
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+
+  visibility: hidden;
+  .share-text {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.3rem;
+  }
+  .share-logos {
+    display: grid;
+    margin-right: auto;
+    margin-left: 0.5rem;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    align-items: center;
+    .logo-btn {
+      border-radius: 0;
+      border: none;
+      background: transparent;
+      margin: 0 0.5rem;
+      img {
+        height: 1.3rem;
+        width: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    .share {
+      left: 100%;
+      bottom: 30%;
+      transform: translate(-80%, 0);
+      border-radius: $radius - 5;
+      grid-template-columns: 1fr 1fr;
+      width: 15rem;
+      height: 3.3rem;
+      padding: 0 2.5rem;
+      .share-text {
+        font-size: 0.75rem;
+      }
+      .share-logos {
+        margin-top: 0.1rem;
+        .logo-btn {
+          img {
+            height: 1.2rem;
+            width: 1.2rem;
+          }
+        }
+      }
+      .share-trangle {
+        position: absolute;
+        visibility: inherit;
+        width: 2.5rem;
+        height: 1.5rem;
+        background: $cl_veryDarkGrayishBlue;
+        left: 50%;
+        bottom: 0%;
+        transform: translate(-40%, 55%);
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+      }
+    }
+  }
+}

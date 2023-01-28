@@ -1,0 +1,30 @@
+// media queris
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: auto 1fr;
+    padding-right: 1rem;
+    margin: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.081);
+    .header {
+      height: 100%;
+      width: 18rem;
+      img {
+        width: 22rem;
+        height: 18rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: $radius;
+      }
+    }
+    .description {
+      padding-top: 2rem;
+      .dec-header {
+        font-size: 1.2rem;
+      }
+      .dec-text {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
