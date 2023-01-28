@@ -1,6 +1,7 @@
+@import "./variables";
 // font
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
-// reset style
+// reset style and global style
 *,
 ::before,
 ::after {
@@ -16,6 +17,10 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+  color: $cl_veryDarkGrayishBlue;
+}
+p {
+  color: $cl_grayishBlue;
 }
 a {
   text-decoration: none;

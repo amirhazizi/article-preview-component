@@ -1,5 +1,9 @@
 // colors
-$cl-veryDarkGrayishBlue: hsl(217, 19%, 35%);
-$cl-desaturatedDarkBlue: hsl(214, 17%, 51%);
-$cl-grayishBlue: hsl(212, 23%, 69%);
-$cl-lightGrayishBlue: hsl(210, 46%, 95%);
+$cl_veryDarkGrayishBlue: hsl(217, 19%, 35%);
+$cl_desaturatedDarkBlue: hsl(214, 17%, 51%);
+$cl_grayishBlue: hsl(212, 23%, 69%);
+$cl_lightGrayishBlue: hsl(210, 46%, 95%);
+
+// other
+$radius: 15px;
+$transition: all 200ms linear;

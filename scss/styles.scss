@@ -1,5 +1,72 @@
 @import "./utils/config";
-@import "./utils/variables";
+body {
+  background: $cl_lightGrayishBlue;
+}
+.container {
+  width: 90vw;
+  margin: 5rem auto;
+  max-width: 700px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  .header {
+    height: 19rem;
+    overflow: hidden;
+    img {
+      height: 23rem;
+      filter: brightness(110%);
+      border-top-right-radius: $radius;
+      border-top-left-radius: $radius;
+    }
+  }
+  .description {
+    background-color: white;
+    padding: 3rem 2.5rem;
+    padding-bottom: 0;
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+    .user-info {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      img {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: $radius * 10;
+      }
+      .user-dec {
+        margin: 0 1rem;
+        margin-top: 2rem;
+        line-height: 1.5;
+        h2 {
+          font-size: 1.1rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      button {
+        border: none;
+        border-radius: $radius * 10;
+        img {
+          padding: 0.6rem;
+          height: 2.4rem;
+          width: 2.4rem;
+        }
+      }
+    }
+  }
+}
+
 // footer
 .attribution {
   font-size: 11px;
