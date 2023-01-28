@@ -40,89 +40,16 @@ button {
   cursor: pointer;
 }
 
-main {
-  height: 100vh;
-  display: grid;
-  place-items: center;
-  background: hsl(210deg, 46%, 95%);
-}
-main .container {
-  display: grid;
-  position: relative;
-  place-items: center;
-  width: 90vw;
-  max-width: 700px;
-  margin: 5rem auto;
-  background-color: white;
-  border-radius: 15px;
-}
-main .container .header {
-  overflow: hidden;
-  width: 100%;
-  height: 14rem;
-}
-main .container .header img {
-  height: 17rem;
-  filter: brightness(110%);
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-}
-main .container .description {
-  padding: 2.5rem 2.2rem;
-  padding-bottom: 0;
-}
-main .container .description .dec-header {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-main .container .description .dec-text {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-main .container .user-info {
-  position: relative;
-  display: grid;
-  width: 100%;
-  padding: 1rem 0;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-}
-main .container .user-info .user-avatar {
-  height: 2.5rem;
-  width: 2.5rem;
-  border-radius: 150px;
-}
-main .container .user-info .user-dec {
-  margin: 0 1rem;
-  line-height: 1.7;
-}
-main .container .user-info .user-dec h2 {
-  font-size: 0.8rem;
-}
-main .container .user-info .user-dec p {
-  font-size: 0.8rem;
-}
-main .container .user-info .share-btn {
-  border: none;
-  border-radius: 150px;
-}
-main .container .user-info .share-btn img {
-  padding: 0.6rem;
-  height: 2rem;
-  width: 2rem;
-}
-main .container .share {
+.share {
   display: grid;
   position: absolute;
   visibility: hidden;
-  padding: 0 2.5rem;
+  padding: 1rem 2.5rem;
   padding-right: 2rem;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4.5rem;
-  transform: translate(0, -10%);
+  transform: translate(0, 0);
   grid-template-columns: auto 1fr auto;
   justify-content: space-between;
   align-items: center;
@@ -130,12 +57,12 @@ main .container .share {
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
-main .container .share .share-text {
+.share .share-text {
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.3rem;
 }
-main .container .share .share-logos {
+.share .share-logos {
   display: grid;
   margin-right: auto;
   margin-left: 0.5rem;
@@ -143,61 +70,182 @@ main .container .share .share-logos {
   justify-content: space-between;
   align-items: center;
 }
-main .container .share .share-logos .logo-btn {
+.share .share-logos .logo-btn {
   border-radius: 0;
   border: none;
   background: transparent;
   margin: 0 0.5rem;
 }
-main .container .share .share-logos .logo-btn img {
+.share .share-logos .logo-btn img {
   height: 1.3rem;
   width: 1.3rem;
 }
-main .container .share .share-btn {
+.share .share-btn {
   border: none;
   border-radius: 150px;
   background: hsl(214deg, 17%, 51%);
 }
-main .container .share .share-btn img {
+.share .share-btn img {
   padding: 0.6rem;
   height: 2rem;
   width: 2rem;
   filter: brightness(700%);
 }
+
 @media (min-width: 768px) {
-  main .container {
-    grid-template-columns: auto 1fr;
-    padding-right: 1rem;
-    margin: 0;
+  .container .share {
+    left: 100%;
+    bottom: 30%;
+    transform: translate(-80%, 0);
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr;
+    width: 15rem;
+    height: 3.3rem;
+    padding: 0 2.5rem;
   }
-  main .container .header {
-    height: 100%;
-    width: 18rem;
-  }
-  main .container .header img {
-    width: 22rem;
-    height: 18rem;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 15px;
-  }
-  main .container .description {
-    padding-top: 2rem;
-  }
-  main .container .description .dec-header {
-    font-size: 1.2rem;
-  }
-  main .container .description .dec-text {
+  .container .share .share-text {
     font-size: 0.75rem;
-    line-height: 1.5;
-    margin-bottom: 0;
+  }
+  .container .share .share-logos {
+    margin-top: 0.1rem;
+  }
+  .container .share .share-logos .logo-btn img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .container .share .share-btn {
+    display: none;
+  }
+  .container .share .share-trangle {
+    position: absolute;
+    visibility: inherit;
+    width: 2.5rem;
+    height: 1.5rem;
+    background: hsl(217deg, 19%, 35%);
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-40%, 55%);
+    -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
   }
 }
-
-.attribution {
+footer {
+  position: fixed;
+  bottom: 0%;
+  background: white;
+  padding: 0.2rem 0.7rem;
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
+  font-weight: bold;
   color: hsl(228deg, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(210deg, 46%, 95%);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: grid;
+  position: relative;
+  place-items: center;
+  width: 90vw;
+  max-width: 700px;
+  margin: 3rem auto;
+  background-color: white;
+  border-radius: 15px;
+}
+.container .header {
+  overflow: hidden;
+  width: 100%;
+  height: 14rem;
+}
+.container .header img {
+  height: 17rem;
+  filter: brightness(110%);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.container .description {
+  padding: 2.5rem 2.2rem;
+  padding-bottom: 0;
+}
+.container .description .dec-header {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.container .description .dec-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.container .user-info {
+  position: relative;
+  display: grid;
+  width: 100%;
+  padding: 1rem 0;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+.container .user-info .user-avatar {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 150px;
+}
+.container .user-info .user-dec {
+  margin: 0 1rem;
+  line-height: 1.7;
+}
+.container .user-info .user-dec h2 {
+  font-size: 0.8rem;
+}
+.container .user-info .user-dec p {
+  font-size: 0.8rem;
+}
+.container .user-info .share-btn {
+  border: none;
+  border-radius: 150px;
+}
+.container .user-info .share-btn img {
+  padding: 0.6rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.avtive {
+  visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: auto 1fr;
+    padding-right: 1rem;
+    margin: 0;
+  }
+  .container .header {
+    height: 100%;
+    width: 18rem;
+  }
+  .container .header img {
+    width: 22rem;
+    height: 18rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+  }
+  .container .description {
+    padding-top: 2rem;
+  }
+  .container .description .dec-header {
+    font-size: 1.2rem;
+  }
+  .container .description .dec-text {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
 }
