@@ -1,6 +1,7 @@
 // media queris
 @media (min-width: 768px) {
   .container {
+    width: 700px;
     grid-template-columns: auto 1fr;
     padding-right: 1rem;
     margin: 0;

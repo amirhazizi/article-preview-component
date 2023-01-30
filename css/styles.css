@@ -142,8 +142,7 @@ body {
   display: grid;
   position: relative;
   place-items: center;
-  width: 90vw;
-  max-width: 700px;
+  width: 350px;
   margin: 3rem auto;
   background-color: white;
   border-radius: 15px;
@@ -219,6 +218,7 @@ body {
 
 @media (min-width: 768px) {
   .container {
+    width: 700px;
     grid-template-columns: auto 1fr;
     padding-right: 1rem;
     margin: 0;
